@@ -1,6 +1,6 @@
 export const asynCatch = (fn) => async (req, res, next) => {
     try {
-        await fn();
+        await fn(req, res, next);
     } catch (error) {
         console.log(error);
         return res.status(500).send(error.mesaage);
