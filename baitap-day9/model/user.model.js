@@ -7,7 +7,17 @@ const UserSchema = new Schema({
     email: String,
     password: String,
     roles: [String],
+    fullName: String,
+    birthday: String,
+    National: String,
+    birthPlace: String,
+    skill: String,
+    Project: String,
+    myinfo: String
 });
+
+
+
 
 const UserModel = mongoose.model("user", UserSchema);
 

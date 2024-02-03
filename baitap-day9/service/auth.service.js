@@ -8,7 +8,7 @@ export const register = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    const user = await UserModel.create({ email, username, hashedPassword, roles: ["user "] });
+    const user = await UserModel.create({ email, username, hashedPassword, roles: ["x-admin"] });
 
     console.log("bod :>>y", req.body)
     res.status(200).send(user)
